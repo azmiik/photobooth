@@ -4,8 +4,7 @@
 import os
 import pygame
 import time
-from PIL import Image, ImageDraw
-import ImageChops
+from PIL import Image, ImageDraw, ImageChops
 import math
 import threading
 

@@ -23,7 +23,7 @@ class PhotoBoothFunction(object):
 
     prep_delay_short = 2
     prep_delay_long  = 3
-    total_pics       = 4 # Default number of pics to be taken
+    total_pics       = 1 # Default number of pics to be taken
 
     capture_delay    = 2 # Default delay between pics
 
