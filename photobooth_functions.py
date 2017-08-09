@@ -545,12 +545,14 @@ class AccompaniedPhoto(PhotoBoothFunction):
             if choice == 'l':
                 if self.chosen_accompaniment > 1:
                     self.chosen_accompaniment -= 1
+                    print 'l'
                 else:
                     self.chosen_accompaniment = len(files) + 1
                 self.change_accompaniment(files)
             if choice == 'r':
                 if self.chosen_accompaniment < (len(files) + 1):
                     self.chosen_accompaniment += 1
+                    print 'r'
                 else:
                     self.chosen_accompaniment = 1
                 self.change_accompaniment(files)
