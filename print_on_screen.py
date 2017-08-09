@@ -242,7 +242,7 @@ class OverlayOnCamera(object):
                 self.overlay.update(pad.tostring())
             else:
                 # If it was a different size, we will have to remove the previous overlay first
-                camera.remove_overlay(self.overlay)
+                self.camera.remove_overlay(self.overlay)
                 self.overlay = self.camera.add_overlay(pad.tostring(), layer=3, size=img.size, alpha=128)
         else:
             self.overlay = self.camera.add_overlay(pad.tostring(), layer=3, size=img.size, alpha=128)
