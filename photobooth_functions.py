@@ -7,6 +7,7 @@ import picamera # http://picamera.readthedocs.org/en/release-1.4/install2.html
 import subprocess
 from PIL import Image
 import threading
+from pprint import pprint
 
 from print_on_screen import OverlayOnCamera, TextPrinter, ImagePrinter, screen_colour_fill
 from photo_handling import PhotoHandler
@@ -525,6 +526,8 @@ class AccompaniedPhoto(PhotoBoothFunction):
         # Use the JPG versions of accompaniment files, which have black background
         file_pattern = self.filehandler.get_full_path(self.accompaniment_dir, "*.jpg")
         files = self.filehandler.get_sorted_file_list(file_pattern)
+        pprint(files)
+
 
         # If there are no images, then chosen_accompaniment will be the blank screen
         if len(files) < 1:
